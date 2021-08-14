@@ -1,4 +1,4 @@
-import Footer from './footer'
+import Footer from './Common/footer'
 import Meta from './meta'
 
 type Props = {
