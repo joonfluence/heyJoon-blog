@@ -37,9 +37,11 @@ export default Header
 
 const Wrapper = styled.section`
   border-right: 1px solid black;
+  height: 100vh;
   @media screen and (max-width: 768px){
     border-bottom: 1px solid black;
     border-right: none;
+    height: 100%;
   }
-  ${tw`flex justify-between items-center md:flex-col md:justify-start p-5`}
+  ${tw`flex justify-between sticky items-center md:flex-col md:justify-start p-5`}
 `;

@@ -1,32 +1,33 @@
 import Container from './container'
-import { EXAMPLE_PATH } from '../../lib/constants'
+import React from 'react'
+import Link from 'next/link'
+import styled from 'styled-components'
+import tw from 'twin.macro'
 
 const Footer = () => {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
+        <CotentBlock>
+          <h2 className="tracking-tight md:tracking-tighter leading-tight mb-3">
+          <Link href="/">
+            <a className="hover:underline">
+              <span className="text-2xl md:text-4xl font-bold mr-2">heyJoon</span>
+              <span className="md:text-2xl">Blog.</span>
             </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
+          </Link>
+          </h2>
+          <span className="pt-7">© 2021, All rights reserved by heyJoon.</span>
+        </CotentBlock>
       </Container>
     </footer>
   )
 }
 
 export default Footer
+
+const CotentBlock = styled.div`
+  margin: 0 auto;
+  border-top: 1px solid black;
+  ${tw`pt-5 pb-10 flex flex-col items-center`}
+`

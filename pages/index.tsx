@@ -16,7 +16,7 @@ const Index:FC<Props> = ({ allPosts }) => {
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
-        <div className="block md:flex">
+        <div className="relative block md:flex">
           <Header />
           <InnerWrapper>
             <Content allPosts={allPosts}></Content>
