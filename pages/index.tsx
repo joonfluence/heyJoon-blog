@@ -22,7 +22,8 @@ const Index = ({ allPosts }: Props) => {
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Container>
-          <Intro />
+          {/* TODO : 카테고리에 따라서 제목이 달라져야 함 */}
+          <Intro title='News'/>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
