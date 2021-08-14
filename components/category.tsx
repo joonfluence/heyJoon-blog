@@ -9,7 +9,6 @@ type Props = {
 
 const Component:FC<Props> = ({Open}) => {
   return (
-    <div>
       <IconMenu isOpen={Open}>
         <MenuItems>
           <Link href="/posts/news">
@@ -35,7 +34,6 @@ const Component:FC<Props> = ({Open}) => {
           </Link>
         </MenuItems>
       </IconMenu>
-    </div>
     )
   }
 
@@ -47,12 +45,12 @@ const IconMenu = styled.div<{isOpen : boolean}>`
   width: 300px;
   border: 1px solid black;
   border-right: none;
-  top: 9.8%;
+  top: 84px;
   right: 0%;
   display: ${({ isOpen }) => isOpen ? 'block' : 'none'};
   @media screen and (min-width: 768px){
     position: relative;
-    display: block;
+    display: flex;
     border: none;
   }
 `;
@@ -64,5 +62,5 @@ const MenuItems = styled.div`
       margin: 15px;
     }
   }
-  ${tw`flex flex-col justify-evenly m-5`}
+  ${tw`flex flex-col m-5`}
 `;

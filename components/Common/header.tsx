@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import styled from 'styled-components'
 import tw from 'twin.macro'
+import Avatar from '../avatar'
 import Category from '../category'
 
 type Props = {}
@@ -15,7 +16,7 @@ const Header: FC<Props> = () => {
   };
   return (
     <Wrapper>
-      <h2 className="tracking-tight md:tracking-tighter leading-tight mb-3">
+      <h2 className="tracking-tight md:tracking-tighter leading-tight ml-5 mb-3">
         <Link href="/">
           <a className="hover:underline">
             <span className="text-2xl md:text-4xl font-bold mr-2">heyJoon</span>
@@ -23,12 +24,13 @@ const Header: FC<Props> = () => {
           </a>
         </Link>
       </h2>
-      <div className="tracking-tight md:tracking-tighter leading-tight">
-        <div className="mr-5">
-          <GiHamburgerMenu onClick={ClickHandler} className="text-2xl block md:hidden"/>
-        </div>
-        <Category Open={Open}/>
+      {/* <AvatarBlock>
+        <Avatar name="이준호" picture='/assets/blog/authors/jj.jpeg'/>
+      </AvatarBlock> */}
+      <div className="mr-5 md:hidden">
+        <GiHamburgerMenu onClick={ClickHandler} className="text-2xl block md:hidden"/>
       </div>
+      <Category Open={Open}/>
     </Wrapper>
   )
 }
@@ -43,5 +45,12 @@ const Wrapper = styled.section`
     border-right: none;
     height: 100%;
   }
-  ${tw`flex justify-between sticky items-center md:flex-col md:justify-start p-5`}
+  ${tw`sticky`}
 `;
+
+const AvatarBlock = styled.div`
+  ${tw`pt-10`}
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+`
