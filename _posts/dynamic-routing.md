@@ -10,6 +10,8 @@ ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 ---
 
+<pre><code class="summary">body { background:red; }</code></pre> <pre><code class="details">&lt;p&gt;test&lt;/p&gt;</code></pre> <pre><code class="javascript">const aa = x => x * 3;</code></pre>
+
 # h1
 ## h2
 ### h3
@@ -76,6 +78,9 @@ LIST
     - SubSublist
       - SubSubSublist
 
+<code class='python'>
+  temp = [1, 2, 3, 4]
+</code>
 <code class='javascript'>const temp = [1,2,3,4];</code>
 <h1>asdasdasdas</h1>
 

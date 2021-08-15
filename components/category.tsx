@@ -54,7 +54,7 @@ const IconMenu = styled.div<{isOpen : boolean}>`
     width: 100%;
     height: 100vh;
     border: none;
-    top: 10%;
+    top: 15%;
     left: 0%;
   }
 `;
@@ -63,7 +63,7 @@ const MenuItems = styled.div`
   && {
     & > li {
       ${tw`text-2xl lg:text-2xl`}
-      padding: 30px;
+      padding: 20px;
     }
   }
   ${tw`absolute flex flex-col m-5`}

@@ -39,6 +39,8 @@ export default Header
 
 const Wrapper = styled.section`
   ${tw`sticky flex justify-between items-center md:block p-5`}
+  top: 0;
+  height: 100vh;
   border-bottom: 1px solid black;
   @media screen and (min-width: 768px){
     border-right: 1px solid black;
