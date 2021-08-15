@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
       <>
         <Head>
+          <link rel="stylesheet" href="github-markdown.css" />
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Meta />

@@ -9,21 +9,91 @@ author:
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 ---
-### hello
 
-1. ㅁ
-2. ㅁㅁ
-3. ㅇ
+# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
 
-my name is `joonho`
 ```
-const test = [1, 2, 3];
+const temp = [1, 2, 3];
 ```
 
-(네이버)['www.naver.com']
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned |  |
+| col 2 is      | centered      |    |
+| zebra stripes | are neat      |     |
 
-- ㅁ
-- ㅁㅁ
-- ㅁㅁ
-- ㅁㅁ
-- ㅁㅁ
+- li
+*a*
+**markdown**
+
+`1`
+- [x]
+- [x]
+[Naver](www.naver.com)
+![Alt text](/path/to/img.jpg)
+![Alt text](/path/to/img.jpg "Optional title")
+
+---
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned |  |
+| col 2 is      | centered      |    |
+| zebra stripes | are neat      |     |
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself]
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+
+LIST
+- SUBLIST
+    - SubSublist
+      - SubSubSublist
+
+<code class='javascript'>const temp = [1,2,3,4];</code>
+<h1>asdasdasdas</h1>
+
+<table><thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody></table>
