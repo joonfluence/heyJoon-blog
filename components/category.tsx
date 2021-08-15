@@ -40,27 +40,31 @@ const Component:FC<Props> = ({Open}) => {
 export default Component
 
 const IconMenu = styled.div<{isOpen : boolean}>`
-  position: absolute;
-  background-color: #fff;
+  ${tw`absolute md:block`}
   width: 300px;
+  height: 700px;
+  z-index: 5;
+  background-color: white;
   border: 1px solid black;
   border-right: none;
-  top: 84px;
+  top: 100%;
   right: 0%;
   display: ${({ isOpen }) => isOpen ? 'block' : 'none'};
   @media screen and (min-width: 768px){
-    position: relative;
-    display: flex;
+    width: 100%;
+    height: 100vh;
     border: none;
+    top: 10%;
+    left: 0%;
   }
 `;
 
 const MenuItems = styled.div`
   && {
     & > li {
-      ${tw`text-xl`}
-      margin: 15px;
+      ${tw`text-2xl lg:text-2xl`}
+      padding: 30px;
     }
   }
-  ${tw`flex flex-col m-5`}
+  ${tw`absolute flex flex-col m-5`}
 `;

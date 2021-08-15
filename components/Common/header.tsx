@@ -16,11 +16,11 @@ const Header: FC<Props> = () => {
   };
   return (
     <Wrapper>
-      <h2 className="tracking-tight md:tracking-tighter leading-tight ml-5 mb-3">
+      <h2 className="tracking-tight md:tracking-tighter leading-tight m-5">
         <Link href="/">
           <a className="hover:underline">
-            <span className="text-2xl md:text-4xl font-bold mr-2">heyJoon</span>
-            <span className="md:text-2xl">Blog.</span>
+            <span className="text-4xl md:text-6xl font-bold mr-2">heyJoon</span>
+            <span className="text-xl md:text-2xl">Blog.</span>
           </a>
         </Link>
       </h2>
@@ -38,18 +38,16 @@ const Header: FC<Props> = () => {
 export default Header
 
 const Wrapper = styled.section`
-  border-right: 1px solid black;
-  height: 100vh;
-  @media screen and (max-width: 768px){
-    border-bottom: 1px solid black;
-    border-right: none;
-    height: 100%;
+  ${tw`sticky flex justify-between items-center md:block p-5`}
+  border-bottom: 1px solid black;
+  @media screen and (min-width: 768px){
+    border-right: 1px solid black;
+    border-bottom: none;
   }
-  ${tw`sticky`}
 `;
 
 const AvatarBlock = styled.div`
-  ${tw`pt-10`}
+  ${tw`pl-5 pt-10`}
   @media screen and (max-width: 768px){
     display: none;
   }

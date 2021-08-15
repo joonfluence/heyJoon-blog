@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 
 const Footer = () => {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
+    <footer className="border-t border-accent-2">
       <CotentBlock>
         <h2 className="tracking-tight md:tracking-tighter leading-tight mb-3">
         <Link href="/">
