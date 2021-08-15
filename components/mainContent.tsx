@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
+import MoreStories from './more-stories'
+import HeroPost from './hero-post'
+import Intro from './intro'
 import Post from '../types/post'
 
 export type Props = {

@@ -1,4 +1,6 @@
-import Meta from './meta'
+import InnerWrapper from '../components/Common/container'
+import Header from '../components/Common/header'
+import Footer from '../components/Common/footer'
 
 type Props = {
   preview?: boolean
@@ -7,12 +9,15 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <main>{children}</main>
+    <div className="min-h-screen">
+      <div className="relative block md:flex">
+        <Header />
+        <InnerWrapper>
+          <main>{children}</main>
+          <Footer />
+        </InnerWrapper>
       </div>
-    </>
+    </div>
   )
 }
 
