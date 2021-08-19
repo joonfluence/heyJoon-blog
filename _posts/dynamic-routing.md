@@ -80,6 +80,7 @@ LIST
     - SubSublist
       - SubSubSublist
 
+<<<<<<< HEAD
 <pre>
   <code class='python'>
     temp = [1, 2, 3, 4]
@@ -88,6 +89,12 @@ LIST
 <pre>
   <code class='javascript'>const temp = [1,2,3,4];</code>
 </pre>
+=======
+<code class='python'>
+  temp = [1, 2, 3, 4]
+</code>
+<code class='javascript'>const temp = [1,2,3,4];</code>
+>>>>>>> e15ec42a5e523bfa35132f6d006e8e7048beee05
 <h1>asdasdasdas</h1>
 
 <table><thead>
