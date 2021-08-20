@@ -38,11 +38,12 @@ const Header: FC<Props> = () => {
 export default Header
 
 const Wrapper = styled.section`
-  ${tw`sticky flex justify-between items-center md:block p-5`}
+  ${tw`sticky md:relative flex justify-between items-center md:block p-5`}
   top: 0;
-  height: 100vh;
+  background-color: white;
   border-bottom: 1px solid black;
   @media screen and (min-width: 768px){
+    height: 100vh;
     border-right: 1px solid black;
     border-bottom: none;
   }

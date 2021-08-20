@@ -12,7 +12,7 @@ ogImage:
 
 <pre><code class="language-css">body { background:red; }</code></pre> <pre><code class="language-html">&lt;p&gt;test&lt;/p&gt;</code></pre> <pre><code class="language-javascript">const aa = x => x * 3;</code></pre>
 
-<pre><code class="css">body { background:red; }</code></pre> <pre><code class="language-html">&lt;p&gt;test&lt;/p&gt;</code></pre> <pre><code class="javascript">const aa = x => x * 3;</code></pre>
+<pre><code class="css">body { background:red; }</code></pre> <pre><code class="language-html">&lt;p&gt;test&lt;/p&gt;</code></pre> <pre><code class="javascript">const  aa = x => x * 3;</code></pre>
 
 # h1
 ## h2
@@ -80,7 +80,6 @@ LIST
     - SubSublist
       - SubSubSublist
 
-<<<<<<< HEAD
 <pre>
   <code class='python'>
     temp = [1, 2, 3, 4]
@@ -89,12 +88,6 @@ LIST
 <pre>
   <code class='javascript'>const temp = [1,2,3,4];</code>
 </pre>
-=======
-<code class='python'>
-  temp = [1, 2, 3, 4]
-</code>
-<code class='javascript'>const temp = [1,2,3,4];</code>
->>>>>>> e15ec42a5e523bfa35132f6d006e8e7048beee05
 <h1>asdasdasdas</h1>
 
 <table><thead>

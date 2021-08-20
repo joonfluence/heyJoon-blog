@@ -11,12 +11,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
       <>
         <Head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/github.min.css" />
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
-          {/* <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/stylesdefault.min.css" />
-          <script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-          <title>Next.js Blog Example with {CMS_NAME}</title> */}
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+          <script>hljs.highlightAll()</script>
+          <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Meta />
         <Layout>
