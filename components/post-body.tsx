@@ -11,6 +11,7 @@ const PostBody = ({ content }: Props) => {
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <div id="disqus_thread"></div>
     </div>
   )
 }
