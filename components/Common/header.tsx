@@ -24,9 +24,6 @@ const Header: FC<Props> = () => {
           </a>
         </Link>
       </h2>
-      {/* <AvatarBlock>
-        <Avatar name="이준호" picture='/assets/blog/authors/jj.jpeg'/>
-      </AvatarBlock> */}
       <div className="mr-5 md:hidden">
         <GiHamburgerMenu onClick={ClickHandler} className="text-2xl block md:hidden"/>
       </div>
@@ -38,8 +35,9 @@ const Header: FC<Props> = () => {
 export default Header
 
 const Wrapper = styled.section`
-  ${tw`sticky md:relative flex justify-between items-center md:block p-5`}
+  ${tw`sticky flex justify-between items-center md:block p-5`}
   top: 0;
+  height: 100%;
   background-color: white;
   border-bottom: 1px solid black;
   @media screen and (min-width: 768px){
