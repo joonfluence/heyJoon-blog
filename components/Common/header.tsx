@@ -3,7 +3,6 @@ import React, { FC, useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-import Avatar from '../avatar'
 import Category from '../category'
 
 type Props = {}

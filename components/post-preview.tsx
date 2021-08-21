@@ -1,16 +1,16 @@
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import Author from '../types/author'
+import DateFormatter from "./date-formatter";
+import CoverImage from "./cover-image";
+import Link from "next/link";
+import Author from "../types/author";
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt?: string
-  author?: Author
-  slug: string
-}
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt?: string;
+  author?: Author;
+  slug: string;
+};
 
 const PostPreview = ({
   title,
@@ -30,11 +30,11 @@ const PostPreview = ({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      {/* <div className="text-lg mb-4">
         <DateFormatter dateString={date} />
-      </div>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default PostPreview
+export default PostPreview;

@@ -1,24 +1,23 @@
-import InnerWrapper from '../components/Common/container'
-import Header from '../components/Common/header'
-import Footer from '../components/Common/footer'
+import Header from "@/components/Common/header";
+import Footer from "@/components/Common/footer";
 
 type Props = {
-  preview?: boolean
-  children: React.ReactNode
-}
+  preview?: boolean;
+  children: React.ReactNode;
+};
 
 const Layout = ({ children }: Props) => {
   return (
     <div className="min-h-screen">
       <div className="relative block md:flex">
         <Header />
-        <InnerWrapper>
+        <div className="mx-auto">
           <main>{children}</main>
           <Footer />
-        </InnerWrapper>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
