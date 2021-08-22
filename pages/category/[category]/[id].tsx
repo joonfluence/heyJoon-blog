@@ -1,14 +1,12 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "@/components/Common/container";
-import PostBody from "@/components/post-body";
-import PostHeader from "@/components/post-header";
-import { getPostBySlug, getAllPosts } from "@/lib/api";
-import PostTitle from "@/components/post-title";
+import { getAllPostsByDirectory, getPostByDirectory } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostType from "@/types/post";
 import Post from "@/components/Common/post";
 import React from "react";
+import { CSSDIR, POSTDIR } from "@/lib/constants";
 
 type Props = {
   post: PostType;
@@ -16,6 +14,7 @@ type Props = {
 
 const Component = ({ post }: Props) => {
   const router = useRouter();
+  console.log(router.query.category);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -30,13 +29,15 @@ export default Component;
 
 type Params = {
   params: {
+    category: string;
     id: string;
   };
 };
 
 export async function getStaticProps({ params }: Params) {
+  const newDir = POSTDIR + params.category + "/" + params.id + ".md";
   // 포스트의 slug와 내용을 반환한다.
-  const post = getPostBySlug(params.id, [
+  const post = getPostByDirectory(newDir, [
     "title",
     "date",
     "slug",
@@ -58,12 +59,15 @@ export async function getStaticProps({ params }: Params) {
   };
 }
 
-export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+export async function getStaticPaths({ params }) {
+  console.log(params);
+  // const newDir = POSTDIR + params.category;
+  const posts = getAllPostsByDirectory(newDir, ["category", "slug"]);
   return {
     paths: posts.map((post) => {
       return {
         params: {
+          category: post.category,
           id: post.slug,
         },
       };

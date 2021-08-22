@@ -1,8 +1,4 @@
-import {
-  getAllPosts,
-  getAllPostsByDirectory,
-  postsDirectory,
-} from "../lib/api";
+import { getAllPostsByDirectory, postsDirectory } from "../lib/api";
 import React, { FC } from "react";
 import MainContent, { Props as ContentProps } from "../components/mainContent";
 
@@ -15,7 +11,7 @@ const Index: FC<Props> = ({ allPosts }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPostsByDirectory(postsDirectory, undefined, [
+  const allPosts = getAllPostsByDirectory(postsDirectory, [
     "title",
     "date",
     "slug",
