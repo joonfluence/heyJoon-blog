@@ -4,8 +4,6 @@ import ErrorPage from "next/error";
 import PostHeader from "../../components/post-header";
 import PostTitle from "../../components/post-title";
 import PostBody from "../../components/post-body";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 
 type Props = {
@@ -27,6 +25,7 @@ const Component = ({ post }: Props) => {
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}
+            category={post.category}
             date={post.date}
             author={post.author}
           />

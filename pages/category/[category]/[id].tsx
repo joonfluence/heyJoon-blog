@@ -6,7 +6,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import PostType from "@/types/post";
 import Post from "@/components/Common/post";
 import React from "react";
-import { CSSDIR, POSTDIR } from "@/lib/constants";
+import { POSTDIR } from "@/lib/constants";
 
 type Props = {
   post: PostType;
@@ -35,7 +35,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const newDir = POSTDIR + params.category + "/" + params.id + ".md";
+  const newDir = POSTDIR + params.id + ".md";
   // 포스트의 slug와 내용을 반환한다.
   const post = getPostByDirectory(newDir, [
     "title",
@@ -44,6 +44,7 @@ export async function getStaticProps({ params }: Params) {
     "author",
     "content",
     "ogImage",
+    "category",
     "coverImage",
   ]);
 
@@ -59,10 +60,9 @@ export async function getStaticProps({ params }: Params) {
   };
 }
 
-export async function getStaticPaths({ params }) {
-  console.log(params);
-  // const newDir = POSTDIR + params.category;
-  const posts = getAllPostsByDirectory(newDir, ["category", "slug"]);
+// TODO: 링크 이동 시, 해당 화면으로 이동 되도록 지정해줘야 한다.
+export async function getStaticPaths() {
+  const posts = getAllPostsByDirectory(POSTDIR, ["category", "slug"]);
   return {
     paths: posts.map((post) => {
       return {

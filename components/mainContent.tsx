@@ -10,6 +10,7 @@ export type Props = {
 
 const Component: FC<Props> = ({ allPosts }) => {
   const heroPost = allPosts[0];
+
   const morePosts = allPosts.slice(1);
   return (
     <div className="p-5">
@@ -18,6 +19,7 @@ const Component: FC<Props> = ({ allPosts }) => {
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
+          category={heroPost.category}
           date={heroPost.date}
           author={heroPost.author}
           slug={heroPost.slug}

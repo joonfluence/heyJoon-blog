@@ -18,7 +18,7 @@ const Container = ({ post, children }: Props) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-        <script>hljs.highlightAll()</script>
+        <script>{`hljs.highlightAll()`}</script>
         <title>
           {post.title} | Next.js Blog Example with {CMS_NAME}
         </title>
