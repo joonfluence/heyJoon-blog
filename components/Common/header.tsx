@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import React, { FC, useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import styled from 'styled-components'
-import tw from 'twin.macro'
-import Category from '../category'
+import Link from "next/link";
+import React, { FC, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import styled from "styled-components";
+import tw from "twin.macro";
+import Category from "../category";
 
-type Props = {}
+type Props = {};
 
 const Header: FC<Props> = () => {
   const [Open, setOpen] = useState(false);
   const ClickHandler = () => {
-    console.log('clicked');
+    console.log("clicked");
     setOpen(!Open);
   };
   return (
@@ -24,14 +24,17 @@ const Header: FC<Props> = () => {
         </Link>
       </h2>
       <div className="mr-5 md:hidden">
-        <GiHamburgerMenu onClick={ClickHandler} className="text-2xl block md:hidden"/>
+        <GiHamburgerMenu
+          onClick={ClickHandler}
+          className="text-2xl block md:hidden"
+        />
       </div>
-      <Category Open={Open}/>
+      <Category Open={Open} />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const Wrapper = styled.section`
   ${tw`sticky flex justify-between items-center md:block p-5`}
@@ -39,7 +42,7 @@ const Wrapper = styled.section`
   height: 100%;
   background-color: white;
   border-bottom: 1px solid black;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     height: 100vh;
     border-right: 1px solid black;
     border-bottom: none;
@@ -48,7 +51,7 @@ const Wrapper = styled.section`
 
 const AvatarBlock = styled.div`
   ${tw`pl-5 pt-10`}
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;

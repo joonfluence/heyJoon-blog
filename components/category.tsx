@@ -11,9 +11,6 @@ const Component: FC<Props> = ({ Open }) => {
   return (
     <IconMenu isOpen={Open}>
       <MenuItems>
-        <Link href="/posts/news">
-          <li>New</li>
-        </Link>
         <Link href="/category/html">
           <li>HTML</li>
         </Link>

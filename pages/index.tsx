@@ -10,7 +10,7 @@ const Index: FC<Props> = ({ allPosts }) => {
 
 export default Index;
 
-export const getStaticProps = async () => {
+export const getStaticProps = () => {
   const allPosts = getAllPostsByDirectory(postsDirectory, [
     "title",
     "date",
