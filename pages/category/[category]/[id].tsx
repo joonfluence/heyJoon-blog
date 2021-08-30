@@ -63,6 +63,8 @@ export async function getStaticProps({ params }: Params) {
 // TODO: 링크 이동 시, 해당 화면으로 이동 되도록 지정해줘야 한다.
 export async function getStaticPaths() {
   const posts = getAllPostsByDirectory(POSTDIR, ["category", "slug"]);
+
+  console.log(posts);
   return {
     paths: posts.map((post) => {
       return {
