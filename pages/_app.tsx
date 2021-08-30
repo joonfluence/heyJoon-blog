@@ -1,17 +1,17 @@
 import { AppProps } from "next/app";
-import { CMS_NAME } from "../lib/constants";
+import { BLOG_NAME } from "@/lib/constants";
 import Head from "next/head";
 import React from "react";
-import Layout from "../components/layout";
-import Meta from "../components/meta";
+import Layout from "@/components/layout";
+import Meta from "@/components/meta";
 import "../styles/index.css";
-import "../components/markdown-styles.module.css";
+import "@/components/markdown-styles.module.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>{BLOG_NAME}</title>
       </Head>
       <Meta />
       <Layout>
