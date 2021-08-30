@@ -18,20 +18,23 @@ const Component = ({ post }: Props) => {
 
   return (
     <div>
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <article className="mb-32 p-10">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            category={post.category}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={post.content} />
-        </article>
-      )}
+      <>
+        {router.isFallback ? (
+          <PostTitle>Loading…</PostTitle>
+        ) : (
+          <article className="p-10">
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              category={post.category}
+              date={post.date}
+              author={post.author}
+            />
+            <PostBody content={post.content} />
+            <div className="mt-10" id="disqus_thread"></div>
+          </article>
+        )}
+      </>
     </div>
   );
 };

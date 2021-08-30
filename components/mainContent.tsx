@@ -6,15 +6,16 @@ import Post from "@/types/post";
 
 export type Props = {
   allPosts: Post[];
+  title: string;
 };
 
-const Component: FC<Props> = ({ allPosts }) => {
+const Component: FC<Props> = ({ title, allPosts }) => {
   const heroPost = allPosts[0];
 
   const morePosts = allPosts.slice(1);
   return (
     <div className="p-5">
-      <Intro title="News" />
+      <Intro title={title} />
       {heroPost && (
         <HeroPost
           title={heroPost.title}
