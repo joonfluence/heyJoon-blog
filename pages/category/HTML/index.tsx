@@ -1,19 +1,20 @@
-import { getAllPostsByDirectory, postsDirectory } from "@/lib/api";
+import { getAllPostsByDirectory } from "@/lib/api";
 import React, { FC } from "react";
 import MainContent, { Props as ContentProps } from "@/components/mainContent";
+import { HTMLDIR } from "@/lib/constants";
 
 type Props = ContentProps;
 
 // List Page
 
 const Index: FC<Props> = ({ allPosts }) => {
-  return <MainContent allPosts={allPosts}></MainContent>;
+  return <MainContent title="HTML" allPosts={allPosts}></MainContent>;
 };
 
 export default Index;
 
 export const getStaticProps = () => {
-  const allPosts = getAllPostsByDirectory(postsDirectory, [
+  const allPosts = getAllPostsByDirectory(HTMLDIR, [
     "title",
     "date",
     "slug",

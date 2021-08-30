@@ -11,16 +11,16 @@ const Component: FC<Props> = ({ Open }) => {
   return (
     <IconMenu isOpen={Open}>
       <MenuItems>
-        <Link href="/category/html">
+        <Link href="/category/HTML">
           <li>HTML</li>
         </Link>
-        <Link href="/category/css">
+        <Link href="/category/CSS">
           <li>CSS</li>
         </Link>
-        <Link href="/category/javascript">
+        <Link href="/category/Javascript">
           <li>JavaScript</li>
         </Link>
-        <Link href="/category/nodejs">
+        <Link href="/category/Nodejs">
           <li>Node.js</li>
         </Link>
       </MenuItems>

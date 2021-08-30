@@ -8,7 +8,10 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostByDirectory(directory: string, fields: string[] = []) {
+export function getPostByFileDirectory(
+  directory: string,
+  fields: string[] = []
+) {
   const fileContents = fs.readFileSync(directory, "utf8");
   // string을 object 형식으로 변환해준다.
   const { data, content } = matter(fileContents);
@@ -53,7 +56,7 @@ export function getSubFiles(directory: string, files_?: string[] | never[]) {
 export function getAllPostsByDirectory(directory: string, fields: string[]) {
   let contents: { [key: string]: string }[] = [];
   const files = getSubFiles(directory);
-  files.forEach((file) => contents.push(getPostByDirectory(file, fields)));
+  files.forEach((file) => contents.push(getPostByFileDirectory(file, fields)));
   contents.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
   return contents;
