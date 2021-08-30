@@ -37,7 +37,7 @@ const Header: FC<Props> = () => {
 export default Header;
 
 const Wrapper = styled.section`
-  ${tw`sticky flex justify-between items-center md:block p-5`}
+  ${tw`sticky md:relative flex justify-between items-center md:block p-5`}
   top: 0;
   height: 100%;
   background-color: white;
