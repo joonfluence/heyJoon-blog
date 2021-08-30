@@ -12,6 +12,8 @@ type Props = {
   post: PostType;
 };
 
+// Detail Page
+
 const Component = ({ post }: Props) => {
   const router = useRouter();
   console.log(router.query.category);
