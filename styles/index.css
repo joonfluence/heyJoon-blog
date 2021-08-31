@@ -1,6 +1,20 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;  
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+}
 
 /* Start purging... */
 @tailwind components;
