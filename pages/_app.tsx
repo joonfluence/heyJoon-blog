@@ -9,7 +9,7 @@ import "@/components/markdown-styles.module.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="h-screen overflow-y-hidden">
       <Head>
         <title>{BLOG_NAME}</title>
       </Head>
@@ -17,6 +17,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </div>
   );
 }

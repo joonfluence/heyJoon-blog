@@ -31,7 +31,7 @@ const Component: FC<Props> = ({ Open }) => {
 export default Component;
 
 const IconMenu = styled.div<{ isOpen: boolean }>`
-  ${tw`absolute md:block`}
+  ${tw`absolute md:block mt-5`}
   width: 300px;
   height: 700px;
   z-index: 5;
@@ -45,7 +45,7 @@ const IconMenu = styled.div<{ isOpen: boolean }>`
     width: 100%;
     height: 100vh;
     border: none;
-    top: 15%;
+    top: 20%;
     left: 0%;
   }
 `;
