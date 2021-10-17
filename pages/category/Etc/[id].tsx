@@ -6,7 +6,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import PostType from "@/types/post";
 import Post from "@/components/Common/post";
 import React from "react";
-import { HTMLDIR } from "@/lib/constants";
+import { EXTDIR } from "@/lib/constants";
 
 type Props = {
   post: PostType;
@@ -16,7 +16,6 @@ type Props = {
 
 const Component = ({ post }: Props) => {
   const router = useRouter();
-  (router.query.category);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -37,7 +36,7 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const fileDir = HTMLDIR + params.id + ".md";
+  const fileDir = EXTDIR + params.id + ".md";
   // slug를 통해 해당 디렉토리 하에 있는 포스트를의 slug와 내용을 반환한다.
   const post = getPostByFileDirectory(fileDir, [
     "title",
@@ -65,8 +64,7 @@ export async function getStaticProps({ params }: Params) {
 // TODO: 링크 이동 시, 해당 화면으로 이동 되도록 지정해줘야 한다.
 export async function getStaticPaths() {
   // 디렉토리 하에 있는 모든 파일들을 SSR합니다.
-  const posts = getAllPostsByDirectory(HTMLDIR, ["slug"]);
-
+  const posts = getAllPostsByDirectory(EXTDIR, ["slug"]);
 
   return {
     paths: posts.map((post) => {

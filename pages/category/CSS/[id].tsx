@@ -16,7 +16,6 @@ type Props = {
 
 const Component = ({ post }: Props) => {
   const router = useRouter();
-  console.log(router.query.category);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -50,7 +49,6 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
   ]);
 
-  console.log("성공적으로 post를 불러오고 있다", post);
   // FIXME: Table X. 여기서 마크다운 언어가 테이블 태그로 변환되지 않는 것을 알 수 있다.
   const content = await markdownToHtml(post.content || "");
   return {
@@ -67,8 +65,6 @@ export async function getStaticProps({ params }: Params) {
 export async function getStaticPaths() {
   // 디렉토리 하에 있는 모든 파일들을 SSR합니다.
   const posts = getAllPostsByDirectory(CSSDIR, ["slug"]);
-
-  console.log("해당 디렉토리에 있는 파일들을 모두 불러옵니다.", posts);
 
   return {
     paths: posts.map((post) => {

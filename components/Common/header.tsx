@@ -10,7 +10,6 @@ type Props = {};
 const Header: FC<Props> = () => {
   const [Open, setOpen] = useState(false);
   const ClickHandler = () => {
-    console.log("clicked");
     setOpen(!Open);
   };
   return (
