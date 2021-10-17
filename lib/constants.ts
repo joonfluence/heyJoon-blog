@@ -6,3 +6,4 @@ export const CSSDIR = process.cwd() + "/_posts/CSS/";
 export const JAVASCRIPTDIR = process.cwd() + "/_posts/JavaScript/";
 export const HTMLDIR = process.cwd() + "/_posts/HTML/";
 export const NODEJSDIR = process.cwd() + "/_posts/Nodejs/";
+export const EXTDIR = process.cwd() + "/_posts/Etc/";
